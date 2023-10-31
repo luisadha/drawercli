@@ -29,7 +29,7 @@ exit 0;
 
 elif [ "$opt" == "-S" ]; then # THIS OPTION SUGGESTIONS
 
-ERROR=${2?Error: option requires an argument -- r }
+ERROR=${2?Error: option requires an argument -- S }
 
 
       launch $(launch -l | grep -Exo [a-z0-9:_-]+ | sort -u | xargs | lolcat -r | xargs -n 1 | shuf | head -n "$2" | pick)

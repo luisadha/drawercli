@@ -1,4 +1,4 @@
-# drawercli v1.0.0 
+# drawercli v1.0.1
 # App drawer on Android but it's cli,
 
 source $HOME/storage/shared/termuxlauncher/.apps-launcher # inisialisasi termuxlauncher, ini akan membaca seluruh aplikasi pengguna yang diinstall di perangkat

@@ -17,7 +17,7 @@ if [ -z "$opt" ]; then
 
 
 
-launch $(launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r | xargs -n 1 | pick | termux-clipboard-set ) 2>/dev/null;
+launch $(launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r | xargs -n 1 | pick | termux-clipboard-set ) # 2>/dev/null;
 termux-clipboard-get >> $HOME/.drawercli_history
 
 exit 0;

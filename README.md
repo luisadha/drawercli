@@ -3,6 +3,7 @@
 # Requirement
 
 * Termuxlauncher apk's
+* Termux Api 
 * Pick Command
 * Input keyevent (is in /system/bin make sure it is part of the $PATH variable)
 

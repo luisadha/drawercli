@@ -10,17 +10,19 @@ function backKey() {
 input keyevent 4
 }
 
-backKey
+#backKey
 
 opt="$1"
 if [ -z "$opt" ]; then
 
 
 launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r | xargs -n 1 | pick | termux-clipboard-set
-launch $(termux-clipboard-get)
-termux-clipboard-get >> $HOME/.drawercli_history
 
-exit 0;
+termux-clipboard-get >> $HOME/.drawercli_history
+launch $(termux-clipboard-get)
+
+
+
 
 elif [ "$opt" == "--skip" ]; then # THIS OPTION SKIP
 
@@ -43,9 +45,16 @@ ERROR=${2?Error: option requires an argument -- S }
 
 elif [ "$opt" == "-u" ]; then # THIS OPTION MOST USAGE
 
-  launch $(launch -l | grep -Exo [a-z0-9:_-]+ | cat $HOME/.drawercli_history | uniq -c | sort -r | grep -oP "(?<=')[^'\t0-9]*(?=')" | head -n 1 | pick )
+#  launch $(launch -l | grep -Exo [a-z0-9:_-]+ | 
+#cat $HOME/.drawercli_history | uniq -c | sort -r | tr -d '\t0-9' | head -n 1 | pick
 
-  exit 0;
+
+  cat $HOME/.drawercli_history | uniq -c | sort -r | sed 's/[\t0-9]//g' | head -n 1 | pick | termux-clipboard-set
+
+
+  launch $(termux-clipboard-get)
+
+exit 0;
 
 elif [ "$opt" == "-r" ]; then # THIS OPTION FOR REFRESH LIST APPS BY termuxlauncher
 

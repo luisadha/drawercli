@@ -6,7 +6,7 @@ Without Termuxlauncher this tool won't work
 
 * Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)
 * pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)
-* pkg install pick
+* pkg install pick (https://github.com/mptre/pick)
 * Input keyevent (is in /system/bin make sure it is part of the $PATH variable)
 
 # Usage

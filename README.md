@@ -1,4 +1,4 @@
-# drawercli v1.0.0
+# drawercli v1.0.3
 
 Without Termuxlauncher this tool won't work
 
@@ -22,3 +22,7 @@ drawercli
 
 -r                      To refresh the app list, it will run termuxlauncher itself
 ```
+
+Thanks to contributor :
+
+@Zaedstudios

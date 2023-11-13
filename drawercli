@@ -1,9 +1,9 @@
 #!/bin/bash
 # 
 # drawercli v1.0.2
-# App drawer on Android but it's cli,
+# App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
-# Rilis (100)
+# Release (100)
 # First release on Codeberg
 
 # Update (101)
@@ -17,8 +17,11 @@
 #+fix the strings
 #+add -c options, && --clear-history
 
+# Update (103)
+# Now available in English!
 
-source $HOME/storage/shared/termuxlauncher/.apps-launcher # inisialisasi termuxlauncher, ini akan membaca seluruh aplikasi pengguna yang diinstall di perangkat
+
+source $HOME/storage/shared/termuxlauncher/.apps-launcher # initialize termuxlauncher, this will read all user-installed apps on the device
 
 function resetClipboard() {
  termux-clipboard-set ""
@@ -27,7 +30,6 @@ function resetClipboard() {
 function hideSoftKeyboard() {
  input keyevent 4
 }
-
 
 opt="$1"
 if [ -z "$opt" ]; then
@@ -45,7 +47,6 @@ resetClipboard;
 exit 0;
 
 elif [ "$opt" == "-s" ] || [ "$opt" == "--skip" ]; then # THIS OPTION SKIP
-
 
 launch $(launch -l | grep -o "termux" ) &>/dev/null;
 
@@ -87,7 +88,7 @@ elif [ "$opt" == "-r" ]; then # THIS OPTION FOR REFRESH LIST APPS BY termuxlaunc
 
 launch $(launch -l | grep "termuxlauncher" ) &>/dev/null;
 
-echo "drawercli: Memindai aplikasi baru..."; sleep 1;
+echo "drawercli: Scanning for new apps..."; sleep 1;
 echo -e "Please, type \`drawercli' again to see effect!"
 
 exit 0;
@@ -106,19 +107,19 @@ elif [ "$opt" == "-h" ] || [ "$opt" == "--help" ]; then
 
   echo "drawercli | -S 4 | -u "
   echo
-  echo " Laci aplikasi berbasis command line untuk menampilkan semua daftar aplikasi pengguna yang di-install pada perangkat dan banyak fitur lainnya."
+  echo " Command-line-based app drawer to display a list of all user-installed apps on the device and many other features."
  echo
-  echo "drawercli membutuhkan Peluncur termuxlauncher di install dan dipakai minimal sekali untuk dapat menggunakan alat ini."
+  echo "drawercli requires the termuxlauncher to be installed and used at least once to use this tool."
   echo
   echo "Available options:"
   echo
-  echo -e "-S NUMBER" "\t\t" "Untuk menampilkan rekomendasi aplikasi untuk dibuka, rekomendasi akan ditampilkan sesuai angka yang diberikan."
-  echo -e "-c, --clear-history" "\t" "Untuk membersihkan riwayat aktifitas aplikasi yang dibuka."
-  echo -e "-r" "\t\t\t" "Untuk menyegarkan daftar aplikasi, Aplikasi yang baru diinstall akan ditampilkan setelah penyegaran."
-  echo -e "-s, --skip" "\t\t" "Tidak melakukan apapun, secara harfiah itu membuka Termux itu sendiri."
-  echo -e "-u" "\t\t\t" "Untuk menampilkan aplikasi yang paling sering dipakai."
-  echo -e "-w, --see-wallpaper" "\t" "Untuk melihat wallpaper atau membuka aplikasi current-wallpaper."
-  echo -e "-h, --help" "\t\t" "Untuk menampilkan pesan bantuan ini."
+  echo -e "-S NUMBER" "\t\t" "To display app recommendations to open, recommendations will be displayed according to the given number."
+  echo -e "-c, --clear-history" "\t" "To clear the history of opened app activities."
+  echo -e "-r" "\t\t\t" "To refresh the list of apps, newly installed apps will be displayed after the refresh."
+  echo -e "-s, --skip" "\t\t" "Does nothing, literally opens Termux itself."
+  echo -e "-u" "\t\t\t" "To display the most frequently used apps."
+  echo -e "-w, --see-wallpaper" "\t" "To view the wallpaper or open the current-wallpaper app."
+  echo -e "-h, --help" "\t\t" "To display this help message."
   echo
   exit 1;
  else
@@ -126,5 +127,3 @@ elif [ "$opt" == "-h" ] || [ "$opt" == "--help" ]; then
    exit 1;
 
 fi
-
-

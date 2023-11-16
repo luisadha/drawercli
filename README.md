@@ -17,6 +17,12 @@ Without Termuxlauncher this tool won't work
 curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
 ```
 
+# Uninstall
+
+```sh
+rm -f ~/.local/bin/drawercli
+```
+
 
 # Usage
 

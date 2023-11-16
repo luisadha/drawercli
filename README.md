@@ -37,6 +37,7 @@ drawercli
 -r                      To refresh the app list, it will run termuxlauncher itself
 ```
 
-Thanks to contributor :
+
+# Contributor :
 
 @Zaedstudios

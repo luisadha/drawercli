@@ -26,6 +26,7 @@ rm -f ~/.local/bin/drawercli
 
 # Usage
 
+```sh
 drawercli 
 
 -S NUMBER               To display random app recommendations

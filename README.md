@@ -1,4 +1,5 @@
-# drawercli v1.0.3
+
+drawercli v1.0.3
 
 Without Termuxlauncher this tool won't work
 
@@ -9,8 +10,15 @@ Without Termuxlauncher this tool won't work
 * pkg install pick (https://github.com/mptre/pick)
 * Input keyevent (is in /system/bin make sure it is part of the $PATH variable)
 
+
+# Install
+
+
 # Usage
 ```sh
+
+curl -fSsl " " -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
+
 
 drawercli 
 

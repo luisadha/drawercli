@@ -15,9 +15,11 @@ Without Termuxlauncher this tool won't work
 
 
 # Usage
-```sh
 
-curl -fSsl " " -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
+```sh
+curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
+```
+
 
 
 drawercli 

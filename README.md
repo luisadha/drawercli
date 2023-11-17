@@ -3,7 +3,7 @@
 
 Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.
 
-# Features
+## Features
 
 - Interactive by scrolling the screen to select apps and typing to find favorite apps.
 
@@ -15,7 +15,7 @@ Application drawer in the terminal. Requires the Termuxlauncher library or app a
 
 Without Termuxlauncher & Termux this tool won't work
 
-# Prerequites
+## Prerequites
 
 * Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)
 * pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)
@@ -23,20 +23,20 @@ Without Termuxlauncher & Termux this tool won't work
 * Input keyevent (is in /system/bin make sure it is part of the $PATH variable)
 
 
-# Install
+## Install
 
 ```sh
 curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
 ```
 
-# Uninstall
+## Uninstall
 
 ```sh
 rm -f ~/.local/bin/drawercli
 ```
 
 
-# Usage
+## Usage
 
 ```sh
 drawercli 
@@ -51,6 +51,6 @@ drawercli
 ```
 
 
-# Contributor :
+## Contributor :
 
 @zaedstudioshpkentang

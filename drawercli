@@ -54,7 +54,7 @@ elif [ "$opt" == "-s" ] || [ "$opt" == "--skip" ]; then # THIS OPTION SKIP
 launch $(launch -l | grep -o "termux" ) &>/dev/null;
 
 exit 0;
-elif [ "$opt" == "-v" ]; || [ "$opt" == "--version" ]; then
+elif [ "$opt" == "-v" ] || [ "$opt" == "--version" ]; then
 
 echo -e "drawercli v${version} ";
 exit 0;

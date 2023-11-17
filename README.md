@@ -1,9 +1,21 @@
 
-drawercli v1.0.3
+# drawercli
 
-Without Termuxlauncher this tool won't work
+Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.
 
-# Requirement
+# Features
+
+- Interactive by scrolling the screen to select apps and typing to find favorite apps.
+
+- Updated app list in Termuxlauncher.
+
+- Display frequently opened apps.
+
+- Makes app suggestions to open with a specified number.
+
+Without Termuxlauncher & Termux this tool won't work
+
+# Prerequites
 
 * Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)
 * pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)

@@ -50,7 +50,16 @@ drawercli
 -r                      To refresh the app list, it will run termuxlauncher itself
 ```
 
+## Author
+
+@luisadha
 
 ## Contributor :
 
 @zaedstudioshpkentang
+
+## Thanks
+
+- Creator of Termuxlauncher and termux for creating great apps
+
+- mptree creator of pick

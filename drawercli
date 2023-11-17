@@ -20,6 +20,9 @@
 # Update (103)
 # Now available in English!
 
+# Update (104)
+# Add -v option
+version="1.0.4"
 
 source $HOME/storage/shared/termuxlauncher/.apps-launcher # initialize termuxlauncher, this will read all user-installed apps on the device
 
@@ -50,6 +53,10 @@ elif [ "$opt" == "-s" ] || [ "$opt" == "--skip" ]; then # THIS OPTION SKIP
 
 launch $(launch -l | grep -o "termux" ) &>/dev/null;
 
+exit 0;
+elif [ "$opt" == "-v" ]; || [ "$opt" == "--version" ]; then
+
+echo -e "drawercli v${version} ";
 exit 0;
 
 elif [ "$opt" == "-S" ]; then # THIS OPTION SUGGESTIONS

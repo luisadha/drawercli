@@ -62,4 +62,4 @@ drawercli
 
 - Creator of Termuxlauncher and termux for creating great apps
 
-- mptree creator of pick
+- mptre creator of pick

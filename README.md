@@ -52,9 +52,9 @@ drawercli
 
 ## Author
 
-@luisadha
+@luisadha 
 
-## Contributor :
+## Contributor
 
 @zaedstudioshpkentang
 

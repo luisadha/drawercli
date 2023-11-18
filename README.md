@@ -13,7 +13,7 @@ Application drawer in the terminal. Requires the Termuxlauncher library or app a
 
 - Makes app suggestions to open with a specified number.
 
-Without Termuxlauncher & Termux this tool won't work
+Note: Without Termuxlauncher & Termux this tool won't work
 
 ## Prerequites
 

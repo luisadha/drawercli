@@ -28,7 +28,7 @@ version="1.0.4"
 # Fix bug on proot environment
 
 
-source $HOME/storage/shared/termuxlauncher/.apps-launcher ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher"
+source $HOME/storage/shared/termuxlauncher/.apps-launcher ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
 
 # initialize termuxlauncher, this will read all user-installed apps on the device
 

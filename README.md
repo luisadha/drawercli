@@ -59,7 +59,7 @@ rm -f ~/.local/bin/drawercli
 rm -f /usr/sbin/drawercli
 ``` 
 
-if only login with proot
+if only install with proot
 
 ## Usage
 

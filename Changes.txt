@@ -1,0 +1,28 @@
+
+App drawer on Android but it's CLI,
+# Copyright (c) 2023 Luis Adha
+
+Release (100)
+
+- First release on Codeberg
+
+Update (101)
+~ Fix bug on -u option (stable)
+
+Update (102)
++ Add resetClipboard() function's
+~ Fix bug (OH, OB on scrolling)
+~ Fix bug JAVA error comes with input
+- Del backKey
++ Fix the strings
+
++ Add -c options, && --clear-history
+
+Update (103)
+- Now available in English!
+
+Update (184)
+- Add -v option
+
+Update (105)
+- Fix bug on proot environment

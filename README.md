@@ -1,5 +1,5 @@
 
-<h1 align="center">Drawerclix</h1>
+<h1 align="center">Drawercli</h1>
 
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
 

@@ -25,29 +25,26 @@ Note: Without Termuxlauncher & Termux this tool won't work
 
 ## Install
 
-### termux
+### a. termux
 
 ```sh
 curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
 ```
 
-### proot-distro
+### b. proot-distro
 
 1. 
-
-```sh
+ ```sh
 proot-distro login archlinux
 ```
 
 2. 
-
-```sh
+ ```sh
 zsh
 ```
 
 3. 
-
-```sh
+ ```sh
 curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli" -o /usr/sbin/drawercli && chmod +x /usr/sbin/drawercli
 ```
 

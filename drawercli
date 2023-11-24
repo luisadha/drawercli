@@ -24,7 +24,13 @@
 # Add -v option
 version="1.0.4"
 
-source $HOME/storage/shared/termuxlauncher/.apps-launcher # initialize termuxlauncher, this will read all user-installed apps on the device
+# Update (105)
+# Fix bug on proot environment
+
+
+source $HOME/storage/shared/termuxlauncher/.apps-launcher ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher"
+
+# initialize termuxlauncher, this will read all user-installed apps on the device
 
 function resetClipboard() {
  termux-clipboard-set ""

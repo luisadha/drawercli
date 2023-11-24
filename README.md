@@ -1,7 +1,7 @@
 
-# drawercli
+<h1 align="center">Drawerclix</h1>
 
-Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.
+<p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
 
 ## Features
 

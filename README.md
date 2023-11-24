@@ -55,6 +55,9 @@ curl -fSsl "https://raw.githubusercontent.com/luisadha/drawercli/main/drawercli"
 rm -f ~/.local/bin/drawercli
 ```
 
+```sh
+rm -f /usr/sbin/drawercli
+``` # if only login with proot
 
 ## Usage
 

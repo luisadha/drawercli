@@ -5,7 +5,7 @@
 # Copyright (c) 2023 Luis Adha
 
 
-version="1.0.4"
+version="1.0.5"
 
 
 source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher

@@ -3,6 +3,10 @@
 
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
 
+
+<p align="center">Find drawercli in the alrc-termux plugin.</p>
+
+
 ## Features
 
 - Interactive by scrolling the screen to select apps and typing to find favorite apps.

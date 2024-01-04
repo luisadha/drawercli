@@ -11,6 +11,8 @@ version="1.0.5"
 source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
 
 # initialize termuxlauncher, this will read all user-installed apps on the device
+# initialize alias if any
+source ~/.drawercli_aliases
 
 function resetClipboard() {
  termux-clipboard-set ""

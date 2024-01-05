@@ -72,16 +72,18 @@ if only install with proot
 ## Usage
 
 ```sh
-drawercli 
-
--S NUMBER               To display random app recommendations
-
---skip                  Do nothing or open Termux itself
-
--u                      To display frequently used applications
-
--r                      To refresh the app list, it will run termuxlauncher itself
+  echo
+  echo "Available options:"
+  echo
+  echo -e "-S NUMBER" "\t\t" "To display app recommendations to open, recommendations will be displayed according to the given number."
+  echo -e "-c, --clear-history" "\t" "To clear the history of opened app activities."
+  echo -e "-r" "\t\t\t" "To refresh the list of apps, newly installed apps will be displayed after the refresh."
+  echo -e "-s, --skip" "\t\t" "Does nothing, literally opens Termux itself."
+  echo -e "-u" "\t\t\t" "To display the most frequently used apps."
+  echo -e "-w, --see-wallpaper" "\t" "To view the wallpaper or open the current-wallpaper app."
+  echo -e "-h, --help" "\t\t" "To display this help message."
 ```
+
 
 ## Author
 

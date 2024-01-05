@@ -27,7 +27,7 @@ Update (105)
 - Fix bug on proot environment
 
 Update (106)
-- minor changes
+- Some patch 
 - Add file mana installer (experimental)
 
 Coming Update! (110)

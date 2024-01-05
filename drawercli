@@ -59,7 +59,7 @@ hideSoftKeyboard;
 ERROR=${2?drawercli: option requires an argument after -- S }
 
       launch $(launch -l | grep -Exo [a-z0-9:_-]+ | 
-sort --reverse --numeric-sort | xargs | xargs -n $num | shuf | head -n "$2" | fzf 
+sort --reverse --numeric-sort | xargs | xargs -n $num | shuf | head -n "$2" | fzf )
 
 
     echo $(basename $ERROR)

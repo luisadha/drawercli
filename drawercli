@@ -9,7 +9,7 @@ version="1.1.0"
 
 self="termux"
 depend="termuxlauncher"
-azsort=$(sort --reverse --numeric-sort)
+
 num=1
 input=$(fzf) #$(pick)
 output=$(termux-clipboard-set)
@@ -34,7 +34,7 @@ if [ -z "$opt" ]; then
 hideSoftKeyboard;
 # diantara xargs ada lolcat sebelumnya
 
-  launch -l | grep -Exo '[a-z0-9:_-]+' | ${azsort:-$(sort -u)} | xargs | xargs -n $num | ${input:-$(pick)} | ${output}
+  launch -l | grep -Exo '[a-z0-9:_-]+' | sort --reverse --numeric-sort | xargs | xargs -n $num | ${input:-$(pick)} | ${output}
 
   termux-clipboard-get >> $HOME/.drawercli_history
 
@@ -60,7 +60,8 @@ hideSoftKeyboard;
 
 ERROR=${2?drawercli: option requires an argument after -- S }
 
-      launch $(launch -l | grep -Exo [a-z0-9:_-]+ | ${azsort:-$(sort -u)} | xargs | xargs -n $num | shuf | head -n "$2" | ${input:-$(pick)})
+      launch $(launch -l | grep -Exo [a-z0-9:_-]+ | 
+sort --reverse --numeric-sort | xargs | xargs -n $num | shuf | head -n "$2" | ${input:-$(pick)})
 
 
     echo $(basename $ERROR)

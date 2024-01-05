@@ -26,8 +26,9 @@ opt="$1"
 if [ -z "$opt" ]; then
 
 hideSoftKeyboard;
+# diantara xargs ada lolcat sebelumnya
 
-  launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | lolcat -r | xargs -n 1 | pick | termux-clipboard-set
+  launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | xargs -n 1 | pick | termux-clipboard-set
 
   termux-clipboard-get >> $HOME/.drawercli_history
 
@@ -53,7 +54,7 @@ hideSoftKeyboard;
 
 ERROR=${2?drawercli: option requires an argument after -- S }
 
-      launch $(launch -l | grep -Exo [a-z0-9:_-]+ | sort -u | xargs | lolcat -r | xargs -n 1 | shuf | head -n "$2" | pick)
+      launch $(launch -l | grep -Exo [a-z0-9:_-]+ | sort -u | xargs | xargs -n 1 | shuf | head -n "$2" | pick)
 
 
     echo $(basename $ERROR)

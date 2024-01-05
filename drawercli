@@ -34,7 +34,7 @@ if [ -z "$opt" ]; then
 hideSoftKeyboard;
 # diantara xargs ada lolcat sebelumnya
 
-  launch -l | grep -Exo '[a-z0-9:_-]+' | sort --reverse --numeric-sort | xargs | xargs -n $num | ${input:-$(pick)} | ${output}
+launch -l | grep -Exo '[a-z0-9:_-]+' | sort --reverse --numeric-sort | xargs | xargs -n $num | fzf |termux-clipboard-set
 
   termux-clipboard-get >> $HOME/.drawercli_history
 

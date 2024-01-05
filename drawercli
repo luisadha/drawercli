@@ -6,7 +6,7 @@
 
 
 version="1.1.0"
-
+name="drawercli"
 self="termux"
 depend="termuxlauncher"
 
@@ -17,6 +17,12 @@ source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source
 # initialize termuxlauncher, this will read all user-installed apps on the device
 # initialize alias if any
 source ~/.drawercli_aliases 2>/dev/null
+
+function waitingInterupt() {
+echo -e "$name: Process interrupted by the user (Ctrl + C)"
+exit 0
+}
+trap waitingInterupt SIGINT
 
 function resetClipboard() {
  termux-clipboard-set ""

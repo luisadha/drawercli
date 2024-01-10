@@ -1,3 +1,5 @@
+## Installer for mana package manager
+
 PREFIX="/data/data/com.termux/files/usr"
 
 # pre-install

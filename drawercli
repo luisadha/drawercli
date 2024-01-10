@@ -1,18 +1,28 @@
 #!/bin/bash
 # 
-# drawercli v1.0.6
+# drawercli v1.1.0
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
 
 
-version="1.0.6"
+version="1.1.0"
+name="drawercli"
+self="termux"
+depend="termuxlauncher"
 
+num=1
 
 source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
 
 # initialize termuxlauncher, this will read all user-installed apps on the device
 # initialize alias if any
-source ~/.drawercli_aliases
+source ~/.drawercli_aliases 2>/dev/null
+
+function waitingInterupt() {
+echo -e "$name: Process interrupted by the user (Ctrl + C)"
+exit 0
+}
+trap waitingInterupt SIGINT
 
 function resetClipboard() {
  termux-clipboard-set ""
@@ -28,7 +38,7 @@ if [ -z "$opt" ]; then
 hideSoftKeyboard;
 # diantara xargs ada lolcat sebelumnya
 
-  launch -l | grep -Exo '[a-z0-9:_-]+' | sort -u | xargs | xargs -n 1 | pick | termux-clipboard-set
+launch -l | grep -Exo '[a-z0-9:_-]+' | sort --reverse --numeric-sort | xargs | xargs -n $num | fzf |termux-clipboard-set
 
   termux-clipboard-get >> $HOME/.drawercli_history
 
@@ -40,7 +50,7 @@ exit 0;
 
 elif [ "$opt" == "-s" ] || [ "$opt" == "--skip" ]; then # THIS OPTION SKIP
 
-launch $(launch -l | grep -o "termux" ) &>/dev/null;
+launch $(launch -l | grep -o "${self}" ) &>/dev/null;
 
 exit 0;
 elif [ "$opt" == "-v" ] || [ "$opt" == "--version" ]; then
@@ -54,7 +64,8 @@ hideSoftKeyboard;
 
 ERROR=${2?drawercli: option requires an argument after -- S }
 
-      launch $(launch -l | grep -Exo [a-z0-9:_-]+ | sort -u | xargs | xargs -n 1 | shuf | head -n "$2" | pick)
+      launch $(launch -l | grep -Exo [a-z0-9:_-]+ | 
+sort --reverse --numeric-sort | xargs | xargs -n $num | shuf | head -n "$2" | fzf )
 
 
     echo $(basename $ERROR)
@@ -71,7 +82,7 @@ elif [ $(cat $HOME/.drawercli_history | wc -w) -eq 0 ]; then
     exit 2;
 else
 
-  cat $HOME/.drawercli_history | uniq -c | sort -r | sed 's/[\t0-9]//g' | head -n 1 | pick | termux-clipboard-set
+  cat $HOME/.drawercli_history | uniq -c | sort -r | sed 's/[\t0-9]//g' | head -n 1 | fzf | termux-clipboard-set
 
   launch $(termux-clipboard-get)
 
@@ -82,7 +93,7 @@ fi
 
 elif [ "$opt" == "-r" ]; then # THIS OPTION FOR REFRESH LIST APPS BY termuxlauncher
 
-launch $(launch -l | grep "termuxlauncher" ) &>/dev/null;
+launch $(launch -l | grep "${depend}" ) &>/dev/null;
 
 echo "drawercli: Scanning for new apps..."; sleep 1;
 echo -e "Please, type \`drawercli' again to see effect!"

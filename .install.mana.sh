@@ -1,8 +1,14 @@
+## Installer for mana package manager
+
 PREFIX="/data/data/com.termux/files/usr"
 
 # pre-install
 
 check_dependency pick
+check_dependency fzf
+check_dependency sed
+check_dependency grep
+check_dependency coreutils
 
 if [ ! -f /sdcard/termuxlauncher/.apps-launcher ]; then
 # not found

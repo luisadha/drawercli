@@ -31,7 +31,7 @@ Note: Without Termuxlauncher & Termux this tool won't work
 * pkg install coreutils
 * pkg install sed
 * pkg install grep
-
+* Install apk's Termux:widget (optional)
 
 
 ## Install

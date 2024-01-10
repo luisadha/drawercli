@@ -23,7 +23,8 @@ Note: Without Termuxlauncher & Termux this tool won't work
 
 * Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)
 * pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)
-* pkg install pick (https://github.com/mptre/pick)
+* ~pkg install pick (https://github.com/mptre/pick)~
+* pkg install fzf
 * Input keyevent (is in /system/bin make sure it is part of the $PATH variable)
 * pkg install coreutils
 * pkg install sed
@@ -96,5 +97,5 @@ if only install with proot
 ## Thanks
 
 - Creator of Termuxlauncher and termux for creating great apps
-
 - mptre creator of pick
+- fzf creator

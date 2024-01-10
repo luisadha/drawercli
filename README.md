@@ -17,6 +17,8 @@
 
 - Makes app suggestions to open with a specified number.
 
+- Can be installed in ~/.shortcuts to run via Termux:widget
+
 Note: Without Termuxlauncher & Termux this tool won't work
 
 ## Prerequites/dependencies

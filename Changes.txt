@@ -30,4 +30,10 @@ Update (106)
 - Some patch 
 - Add file mana installer (experimental)
 
-Coming Update! (110)
+Update (110)
+- replace pick with fzf
+- fix bug scrollings
+- fix minor bug
+
+Coming Update! (111)
+

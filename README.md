@@ -9,13 +9,17 @@
 
 ## Features
 
-- Interactive by scrolling the screen to select apps and typing to find favorite apps.
+- Interactive by scrolling the screen to select apps and typing to find favorite apps (this parts has been improved on new update).
 
 - Updated app list in Termuxlauncher.
 
 - Display frequently opened apps.
 
 - Makes app suggestions to open with a specified number.
+
+- Calculate total user applications
+
+- Support touchscreen
 
 - Can be installed in ~/.shortcuts to run via Termux:widget
 

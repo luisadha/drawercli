@@ -64,8 +64,10 @@ launch $(launch -l `# Mengambil daftar aplikasi` \
 | grep -o "${self}" ) &>/dev/null; `# Memanggil termux itu sendiri supaya seolah2 silence`
 exit 0;
 elif [ "$opt" == "-v" ] || [ "$opt" == "--version" ]; then
-  echo -e "drawercli v${version} Copyright (c) 2023 - 2024 Luis Adha";
-  echo -e "Using library termuxlauncher visit <>";
+  echo -e "drawercli v${version} Copyright (c) 2023 - 2024 Luis Adha <adharudin14@gmail.com>";
+  echo -e ""
+  echo -e "You can find this repository at <https://github.com/luisadha/drawercli>";
+  echo -e "Using library termuxlauncher visit <https://github.com/amsitlab/termuxlauncher>";
   exit 0;
 elif [ "$opt" == "-S" ]; then # THIS OPTION SUGGESTIONS
         hideSoftKeyboard; error='option requires an argument after -- S'; catch=$2; try=`if [ -z "$catch" ]; then echo "$name: $error" >&2; exit ${1:+1}; fi`

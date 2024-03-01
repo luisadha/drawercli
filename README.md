@@ -23,6 +23,8 @@
 
 - Can be installed in ~/.shortcuts to run via Termux:widget
 
+- Can be installed on ztmexluis or luis-toolbox.sh
+
 Note: Without Termuxlauncher & Termux this tool won't work
 
 ## Prerequites/dependencies

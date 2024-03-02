@@ -1,5 +1,5 @@
-#!/bin/bash
-# 
+#!/data/data/com.termux/files/usr/bin/bash
+
 # drawercli v1.2.0
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha

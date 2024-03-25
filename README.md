@@ -1,5 +1,5 @@
 
-<h1 align="center">Drawercli</h1>
+<h1 align="center">Drawercli-lightwieght</h1>
 
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
 
@@ -29,8 +29,8 @@ Note: Without Termuxlauncher & Termux this tool won't work
 
 ## Prerequites/dependencies
 
-* Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)
-* pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)
+* Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)~
+* ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)
 * ~pkg install pick (https://github.com/mptre/pick)~
 * pkg install fzf
 * Input keyevent (is in /system/bin make sure it is part of the $PATH variable)

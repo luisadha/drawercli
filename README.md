@@ -1,6 +1,13 @@
 <!-- [![Please don't upload to GitHub](https://nogithub.codeberg.page/badge.svg)](https://nogithub.codeberg.page)
--->
-[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg) [![Maintained-Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://img.shields.io/badge/Maintained%3F-yes-green.svg) [![Project-Size](https://badge-size.herokuapp.com/luisadha/drawercli/main/drawercli.sh)](https://badge-size.herokuapp.com/luisadha/drawercli/main/drawercli.sh)
+[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg) -->
+
+[![Maintained-Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://img.shields.io/badge/Maintained%3F-yes-green.svg) 
+[![Fetch-license](https://img.shields.io/github/license/luisadha/drawercli.svg)](https://img.shields.io/github/license/luisadha/drawercli.svg)
+[![Total-downloads](https://img.shields.io/github/downloads/luisadha/drawercli/total.svg)](https://img.shields.io/github/downloads/luisadha/drawercli/total.svg)
+[![Stargazer](https://img.shields.io/github/stars/luisadha/drawercli.svg)](https://img.shields.io/github/stars/luisadha/drawercli.svg)
+[![Fork-totals](https://img.shields.io/github/forks/luisadha/drawercli.svg)](https://img.shields.io/github/forks/luisadha/drawercli.svg)
+[![Watcher-totals](https://img.shields.io/github/watchers/luisadha/drawercli.svg)](https://img.shields.io/github/watchers/luisadha/drawercli.svg)
+
 
 
 <h1 align="center">Drawercli-lightwieght</h1>
@@ -44,7 +51,8 @@ Note: Without Termuxlauncher & Termux this tool won't work
 * Install apk's Termux:widget (optional)
 
 
-## Install
+
+## Install with BAKER (bpkg) 
 
 ```sh
 bpkg install -g luisadha/drawercli

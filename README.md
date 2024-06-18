@@ -43,13 +43,17 @@ Note: Without Termuxlauncher & Termux this tool won't work
 ## Install
 
 ```sh
-curl -fSsl "https://github.com/luisadha/drawercli/blob/v1.2.1-lightwieght/drawercli-lightweight.sh" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
+bpkg install -g luisadha/drawercli
 ```
+
+<!-- ```sh
+curl -fSsl "https://github.com/luisadha/drawercli/blob/v1.2.1-lightwieght/drawercli-lightweight.sh" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
+``` -->
 
 ## Uninstall
 
 ```sh
-rm -f ~/.local/bin/drawercli
+rm -f ${PREFIX}/bin/drawercli
 ```
 
 ## Usage

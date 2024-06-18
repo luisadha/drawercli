@@ -1,0 +1,12 @@
+{
+  "name": "drawercli",
+  "version": "1.2.1",
+  "description": "This cli app supports using termuxlauncher as your primary launcher for Android phones, interactively and easily install. That's simply the Termuxlauncher Add-on built with fzf🚀",
+  "scripts": [ "drawercli.sh" ],
+  "license": "MIT",
+  "install": "bpkg run install",
+  "commands": {
+    "install": "mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp mush.sh ${PREFIX:-/usr/local}/bin/mush && cp mush.1 ${PREFIX:-/usr/local}/share/man/man1",
+    "lint": "shellcheck **/*.sh"
+  }
+}

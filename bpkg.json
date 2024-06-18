@@ -6,7 +6,7 @@
   "license": "MIT",
   "install": "bpkg run install",
   "commands": {
-    "install": "mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp mush.sh ${PREFIX:-/usr/local}/bin/mush && cp mush.1 ${PREFIX:-/usr/local}/share/man/man1",
+    "install": "mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp drawercli.sh ${PREFIX:-/usr/local}/bin/drawercli && cp drawercli.1 ${PREFIX:-/usr/local}/share/man/man1",
     "lint": "shellcheck **/*.sh"
   }
 }

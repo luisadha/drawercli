@@ -1,3 +1,7 @@
+<!-- [![Please don't upload to GitHub](https://nogithub.codeberg.page/badge.svg)](https://nogithub.codeberg.page)
+-->
+[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg) [![Maintained-Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://img.shields.io/badge/Maintained%3F-yes-green.svg) [![Project-Size](https://badge-size.herokuapp.com/luisadha/drawercli/main/drawercli.sh)](https://badge-size.herokuapp.com/luisadha/drawercli/main/drawercli.sh)
+
 
 <h1 align="center">Drawercli-lightwieght</h1>
 

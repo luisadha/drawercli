@@ -10,12 +10,12 @@
 
 
 
-<h1 align="center">Drawercli-lightwieght</h1>
+<h1 align="center">Drawercli-lightwieght for Termux</h1>
 
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
 
 
-<p align="center">Find drawercli in the alrc-termux plugin.</p>
+<p align="center"><b>Also find drawercli on alrc-termux plugin.</b></p>
 
 
 ## Features
@@ -52,7 +52,7 @@ Note: Without Termuxlauncher & Termux this tool won't work
 
 
 
-## Install with BAKER (bpkg) 
+## Install with BAKER ([bpkg](https://bpkg.sh/bpkg/))
 
 ```sh
 bpkg install -g luisadha/drawercli

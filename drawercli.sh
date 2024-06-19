@@ -6,8 +6,8 @@
 
 # made with love & clean code priority
 
-echo "eroor nih" >&2 > apa
-version="1.2.0-stable"
+fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
+version="1.2.1-stable"
 name="drawercli"
 self="termux"
 depend="termuxlauncher"

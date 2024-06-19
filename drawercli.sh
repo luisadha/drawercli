@@ -3,7 +3,6 @@
 # drawercli v1.2.1-lightwieght
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
-
 # made with love & clean code priority
 
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2

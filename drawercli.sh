@@ -14,6 +14,7 @@ depend="termuxlauncher";
 hint="$name: Scroll to 'Termux' or type that to quit.\ ";
 info="$name: No such apps or interrupted by user." ;
 num=1;
+tmp_dir="$HOME/.tmp"
 history_path="$HOME/.drawercli_history";
 export PATH="$PATH:/system/bin";
 
@@ -22,7 +23,7 @@ source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source
 # initialize termuxlauncher, this will read all user-installed apps on the device
 # initialize alias if any
 source ~/.drawercli_aliases 2>/dev/null
-
+mkdir -p $tmp_dir 
 function waitingInterupt() {
 echo -e "$name: Process interrupted by the user (Ctrl + C)"
 exit 0

@@ -7,14 +7,15 @@
 # made with love & clean code priority
 
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
-version="1.2.1-stable"
-name="drawercli"
-self="termux"
-depend="termuxlauncher"
-hint="$name: Scroll to 'Termux' or type that to quit.\ "                          info="$name: No such apps or interrupted by user."                     \
-num=1
-history_path="$HOME/.drawercli_history"
-export PATH="$PATH:/system/bin" 
+version="1.2.1-light";
+name="drawercli";
+self="termux";
+depend="termuxlauncher";
+hint="$name: Scroll to 'Termux' or type that to quit.\ ";
+info="$name: No such apps or interrupted by user." ;
+num=1;
+history_path="$HOME/.drawercli_history";
+export PATH="$PATH:/system/bin";
 
 source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
 

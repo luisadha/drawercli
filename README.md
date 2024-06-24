@@ -36,20 +36,20 @@
 
 - Can be installed on ztmexluis or luis-toolbox.sh
 
-Note: Without Termuxlauncher & Termux this tool won't work
+---
+> NOTE:
+Without Termuxlauncher & Termux this tool won't work.
+---
 
 ## Prerequites/dependencies
-
-* Termuxlauncher apk's (https://github.com/amsitlab/termuxlauncher/releases)
-* ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
-* ~pkg install pick (https://github.com/mptre/pick)~
-* pkg install fzf
-* Input keyevent (is in /system/bin make sure it is part of the $PATH variable)
-* pkg install coreutils
-* pkg install sed
-* pkg install grep
-* Install apk's Termux:widget (optional)
-
+#### A. Download and install these apk's
+* Termuxlauncher apk's [Check this!](https://github.com/amsitlab/termuxlauncher/releases)
+* Termux:widget (optional)
+    <!-- * ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
+  * ~pkg install pick (https://github.com/mptre/pick)~ -->
+#### B. Install packages
+* ```input``` keyevent (is in /system/bin make sure it is part of the $PATH variable)
+* git, curl, fzf, coreutils, sed, grep and which.
 
 
 ## Install with BAKER ([bpkg](https://bpkg.sh/bpkg/))

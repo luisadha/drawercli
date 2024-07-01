@@ -1,12 +1,12 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# drawercli v1.2.1-lightwieght
+# drawercli v1.2.2-lightwieght
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
 # made with love & clean code priority
 
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
-version="1.2.1-light";
+version="1.2.2-light";
 name="drawercli";
 self="termux";
 depend="termuxlauncher";
@@ -45,7 +45,7 @@ function Drawer {
             | sort --reverse --numeric-sort                     \
             | xargs                                             \
             | xargs -n $num                                     \
-            | fzf --prompt="$hint" >&2 > ~/.tmp/drawercli.out 
+            | fzf $fast_scroll_flags --prompt="$hint" >&2 > ~/.tmp/drawercli.out 
     echo "$(cat ~/.tmp/drawercli.out)" >> $HOME/.drawercli_history
          if [ "$(cat ~/.tmp/drawercli.out)" == "termux" ]; then 
           break
@@ -79,7 +79,7 @@ elif [ "$opt" == "-S" ]; then # THIS OPTION SUGGESTIONS
         | xargs -n $num                         \
         | shuf `# Mengambil data secara acak` \
         | head -n "${2}" 2>/dev/null `# Mengambil bagian atas saja pada daftar, menyembunyikan error jika tidak ada argumen ke $2` \
-        | fzf -0  `# Lalu diolah dengan fzf, output fzf jangan disembunyikan, -0 berarti akan berhenti jika tidak ada queri yang cocok` \
+        | fzf -0 $fast_scroll_flags  `# Lalu diolah dengan fzf, output fzf jangan disembunyikan, -0 berarti akan berhenti jika tidak ada queri yang cocok` \
         ) &>/dev/null; exit ${1:+0}; # untuk menyembunyikan error dari command launch jika salah input
 elif [ "$opt" == "-u" ]; then # THIS OPTION MOST USAGE
   if [ ! -f $HOME/.drawercli_history ]; then
@@ -96,7 +96,7 @@ else
       | xargs       \
       | xargs -n $num \
       | head -n 1 \
-      | fzf >&2 > ~/.tmp/drawercli.out
+      | fzf $fast_scroll_flags >&2 > ~/.tmp/drawercli.out
             launch $(cat ~/.tmp/drawercli.out);
   #resetClipboard;
 exit ${1:+0};

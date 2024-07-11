@@ -44,7 +44,7 @@ Without Termuxlauncher & Termux this tool won't work.
 ## Prerequites/dependencies
 #### A. Download and install these apk's
 * Termuxlauncher apk's [Check this!](https://github.com/amsitlab/termuxlauncher/releases)
-* Termux:widget (optional)
+* Termux:widget (optional) [Find on Play store](https://play.google.com/store/apps/details?id=com.termux.widget)
     <!-- * ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
   * ~pkg install pick (https://github.com/mptre/pick)~ -->
 #### B. Install packages
@@ -52,7 +52,7 @@ Without Termuxlauncher & Termux this tool won't work.
 * git, curl, fzf, coreutils, sed, grep and which.
 
 
-## Install with BAKER ([bpkg](https://bpkg.sh/bpkg/))
+## Install with Bash Package Manager ([bpkg](https://bpkg.sh/bpkg/))
 
 ```sh
 bpkg install -g luisadha/drawercli

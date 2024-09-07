@@ -32,7 +32,7 @@ trap waitingInterupt SIGINT
  #termux-clipboard-set ""
 #}
 function hideSoftKeyboard() {
- input keyevent 4 2>/dev/null;
+ hide_soft_keyboard || input keyevent 4 2>/dev/null;
 }
 : "function historyPrepare() {
  cat $HOME/.drawercli_history | xargs | xargs -n $num  > $history_path 

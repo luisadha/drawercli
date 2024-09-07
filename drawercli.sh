@@ -1,12 +1,12 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# drawercli v1.2.2-lightwieght
+# drawercli v1.2.3-lightwieght
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
 # made with love & clean code priority
 
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
-version="1.2.2-light";
+version="1.2.3-light";
 name="drawercli";
 self="termux";
 depend="termuxlauncher";

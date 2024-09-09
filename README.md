@@ -87,7 +87,13 @@ Available options:
 -w, --see-wallpaper      To view the wallpaper or open the current-wallpaper app.
 -h, --help               To display this help message.
 ```
+## Issue
 
+Issues related to nix-on-droid, Try clearing this duplicate package garbage fix
+
+```nix
+nix-collect-garbage
+```
 ## Author
 
 @luisadha 

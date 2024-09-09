@@ -50,6 +50,7 @@ Without Termuxlauncher & Termux this tool won't work.
 #### B. Install packages
 * ```input``` keyevent (is in /system/bin make sure it is part of the $PATH variable)
 * git, curl, fzf, coreutils, sed, grep and which.
+* termux-setup-storage
 
 
 ## Install with Bash Package Manager ([bpkg](https://bpkg.sh/bpkg/))

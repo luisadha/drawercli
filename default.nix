@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
 
   src = ./.;
 
-  buildInputs = [ pkgs.bash ]; 
+  buildInputs = [ pkgs.bash ];
 
   buildPhase = ''
     mkdir -p $out/bin
@@ -14,14 +14,14 @@ pkgs.stdenv.mkDerivation {
   '';
 
   installPhase = ''
-    
-    chmod +x $out/bin/drawercli  
+    cp -f ./drawercli.sh $out/bin/drawercli
+    chmod +x $out/bin/drawercli
   '';
 
   meta = with pkgs.lib; {
     description = "This cli app supports using termuxlauncher as your primary launcher for Android phones, interactively and easily install. That's simply the Termuxlauncher Add-on built with fzf🚀
 ";
-    license = licenses.mit; 
-    maintainers = with maintainers; [ luisadha ]; 
+    license = licenses.mit;
+    maintainers = with maintainers; [ luisadha ];
   };
 }

@@ -96,7 +96,13 @@ nix-env --rollback
 ```make
 make uninstall
 ```
+## Optional Config
+Try our custom configurations, Termux config is stored in ~/.termux/termux.properties
 
+```json
+extra-keys-style = none
+extra-keys = [[{key: "drawercli \n", popup: KEYBOARD, display: drawercli}]]
+```
 ## Usage
 
 ```sh

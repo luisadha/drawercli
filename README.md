@@ -62,6 +62,11 @@ bpkg install -g luisadha/drawercli
 <!-- ```sh
 curl -fSsl "https://github.com/luisadha/drawercli/blob/v1.2.1-lightwieght/drawercli-lightweight.sh" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
 ``` -->
+## Install with Make
+
+```make
+make install
+```
 
 ## Install with Nix-build
 
@@ -74,7 +79,7 @@ nix-env -i ./result
 
 ## Uninstall
 
-### a. termux
+### a. general (i.e.: termux)
 
 ```sh
 rm -f ${PREFIX}/bin/drawercli
@@ -84,6 +89,12 @@ rm -f ${PREFIX}/bin/drawercli
 ```nix
 nix-env -e drawercli
 nix-env --rollback
+```
+
+## c. gnumake
+
+```make
+make uninstall
 ```
 
 ## Usage

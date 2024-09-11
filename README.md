@@ -63,6 +63,15 @@ bpkg install -g luisadha/drawercli
 curl -fSsl "https://github.com/luisadha/drawercli/blob/v1.2.1-lightwieght/drawercli-lightweight.sh" -o ~/.local/bin/drawercli && chmod +x ~/.local/bin/drawercli
 ``` -->
 
+## Install with Nix-build
+
+```nix
+nix-build
+```
+```nix
+nix-env -i ./result
+```
+
 ## Uninstall
 
 ```sh

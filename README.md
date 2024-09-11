@@ -48,7 +48,7 @@ Without Termuxlauncher & Termux this tool won't work.
     <!-- * ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
   * ~pkg install pick (https://github.com/mptre/pick)~ -->
 #### B. Install packages
-* ```input``` keyevent (is in /system/bin make sure it is part of the $PATH variable)
+* ```input``` keyevent (is in /system/bin make sure it is part of the $PATH variable) (**Optional**)
 * git, curl, fzf, coreutils, sed, grep and which.
 * termux-setup-storage
 
@@ -74,8 +74,16 @@ nix-env -i ./result
 
 ## Uninstall
 
+### a. termux
+
 ```sh
 rm -f ${PREFIX}/bin/drawercli
+```
+### b. nix-on-droid
+
+```nix
+nix-env -e drawercli
+nix-env --rollback
 ```
 
 ## Usage

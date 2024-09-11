@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+
 # drawercli v1.2.3-lightwieght
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
@@ -17,6 +18,7 @@ tmp_dir="$HOME/.tmp"
 history_path="$HOME/.drawercli_history";
 export PATH="$PATH:/system/bin";
 
+
 source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
 
 # initialize termuxlauncher, this will read all user-installed apps on the device
@@ -31,9 +33,13 @@ trap waitingInterupt SIGINT
 #function resetClipboard() {
  #termux-clipboard-set ""
 #}
+if [ "$SHELL_CMD__PACKAGE_NAME" == "com.termux.nix" ]; then
+:
+else
 function hideSoftKeyboard() {
  hide_soft_keyboard || input keyevent 4 2>/dev/null;
 }
+fi
 : "function historyPrepare() {
  cat $HOME/.drawercli_history | xargs | xargs -n $num  > $history_path 
 }" # deprecrated function

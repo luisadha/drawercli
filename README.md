@@ -36,12 +36,10 @@
 
 - Can be installed on ztmexluis or luis-toolbox.sh
 
----
-> NOTE:
-Without Termuxlauncher & Termux this tool won't work.
----
+> [!NOTE]
+> Without Termuxlauncher & Termux this tool won't work.
 
-## Prerequites/dependencies
+## Dependencies
 #### A. Download and install these apk's
 * Termuxlauncher apk's [Check this!](https://github.com/amsitlab/termuxlauncher/releases)
 * Termux:widget (optional) [Find on Play store](https://play.google.com/store/apps/details?id=com.termux.widget)
@@ -122,6 +120,13 @@ Available options:
 -w, --see-wallpaper      To view the wallpaper or open the current-wallpaper app.
 -h, --help               To display this help message.
 ```
+## Tested
+| Platform | Status |
+| :---------------- | :------: | 
+| Termux | ✅ | 
+| Nix-on-droid | ✅ |
+| Acode Terminal Plugin | ❌ |
+
 ## Issue
 
 Issues related to nix-on-droid, Try clearing this duplicate package garbage fix

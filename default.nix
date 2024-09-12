@@ -10,10 +10,12 @@ pkgs.stdenv.mkDerivation {
 
   buildPhase = ''
     mkdir -p $out/bin
-    cp -r * $out/bin
   '';
 
   installPhase = ''
+    mkdir -p $out/share/doc/drawercli
+    cp -f ./LICENSE $out/share/doc/drawercli/LICENSE
+    cp -f ./README.md $out/share/doc/drawercli/README.md
     cp -f ./drawercli.sh $out/bin/drawercli
     chmod +x $out/bin/drawercli
   '';

@@ -34,7 +34,9 @@ trap waitingInterupt SIGINT
  #termux-clipboard-set ""
 #}
 if [ "$SHELL_CMD__PACKAGE_NAME" == "com.termux.nix" ]; then
-:
+function hideSoftKeyboard {
+ :
+}
 else
 function hideSoftKeyboard() {
  hide_soft_keyboard || input keyevent 4 2>/dev/null;

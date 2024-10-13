@@ -142,9 +142,14 @@ nix-collect-garbage
 
 @zaedstudioshpkentang
 
+## 💰 Support my work by Donating
+ 
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/luisadha) 
+
 ## Thanks
 
 - Creator of Termuxlauncher and termux for creating great apps
 - pick tools
 - fzf tools
 - bpkg (bash package manager)
+- 

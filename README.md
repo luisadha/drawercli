@@ -151,8 +151,6 @@ nix-collect-garbage
 
 ## Thanks
 
-- Creator of Termuxlauncher and termux for creating great apps
-- pick tools
-- fzf tools
-- bpkg (bash package manager)
-- 
+- github.com/amsitlab/termuxlauncher
+- junegunn.github.io/fzf
+- github.com/bpkg/bpkg

@@ -17,7 +17,7 @@
 
 <p align="center"><b>Also find drawercli on alrc-termux plugin.</b></p>
 
-
+ A cli app for termux to open user android apps with Termuxlauncher backend as your main launcher, installation of termuxlauncher apps is necessary for the script to work. [Follow the installation instructions](https://github.com/amsitlab/termuxlauncher/releases)
 ## Features
 
 - Interactive by scrolling the screen to select apps and typing to find favorite apps (this parts has been improved on new update).

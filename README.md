@@ -11,9 +11,9 @@
 
 
 <h1 align="center">Drawercli-lightwieght for Termux</h1>
-
+<!--
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
-
+-->
 
 <p align="center"><b>Also find drawercli on alrc-termux plugin.</b></p>
 

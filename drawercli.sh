@@ -9,7 +9,7 @@
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
 version="1.2.4-stable";
 name="drawercli";
-self="termux";
+self="none";
 depend="termuxlauncher";
 hint="$name: Scroll to 'Termux' or type that to quit.\ ";
 info="$name: No such apps or interrupted by user." ;
@@ -34,10 +34,12 @@ trap waitingInterupt SIGINT
  #termux-clipboard-set ""
 #}
 if [ "$SHELL_CMD__PACKAGE_NAME" == "com.termux.nix" ]; then
+self="nix"
 function hideSoftKeyboard {
  :
 }
 else
+self="termux"
 function hideSoftKeyboard() {
  hide_soft_keyboard || input keyevent 4 2>/dev/null;
 }

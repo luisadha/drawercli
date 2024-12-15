@@ -130,12 +130,18 @@ Available options:
 | Acode Terminal Plugin | ❌ |
 
 ## Issue
+1. Fix shebang on nix
 
-Issues related to nix-on-droid, Try clearing this duplicate package garbage fix
+ ```bash
+sed -i '1s|#!/data/data/com.termux.nix/files/usr/bin/bash|#!/data/data/com.termux.nix/files/home/.nix-profile/bin/bash|' $(command -v drawercli)
+   ```
 
-```nix
+2. Issues related to nix-on-droid, Try clearing this duplicate package garbage fix
+  
+```bash
 nix-collect-garbage
 ```
+
 ## Author
 
 @luisadha 

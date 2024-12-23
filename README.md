@@ -1,14 +1,9 @@
 <!-- [![Please don't upload to GitHub](https://nogithub.codeberg.page/badge.svg)](https://nogithub.codeberg.page)
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg) -->
 
-[![Maintained-No](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://img.shields.io/badge/Maintained%3F-no-red.svg) 
-[![Fetch-license](https://img.shields.io/github/license/luisadha/drawercli.svg)](https://img.shields.io/github/license/luisadha/drawercli.svg)
-[![Total-downloads](https://img.shields.io/github/downloads/luisadha/drawercli/total.svg)](https://img.shields.io/github/downloads/luisadha/drawercli/total.svg)
-[![Stargazer](https://img.shields.io/github/stars/luisadha/drawercli.svg)](https://img.shields.io/github/stars/luisadha/drawercli.svg)
-[![Fork-totals](https://img.shields.io/github/forks/luisadha/drawercli.svg)](https://img.shields.io/github/forks/luisadha/drawercli.svg)
-[![Watcher-totals](https://img.shields.io/github/watchers/luisadha/drawercli.svg)](https://img.shields.io/github/watchers/luisadha/drawercli.svg)
 
-
+[![Fetch-license](https://img.shields.io/github/license/luisadha/drawercli.svg)](https://img.shields.io/github/license/luisadha/drawercli.svg) ![version](https://img.shields.io/badge/version-1.2.4-blue)
+[![Maintained-No](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://img.shields.io/badge/Maintained%3F-no-red.svg) ![android](https://img.shields.io/badge/android-green) ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange)
 
 <h1 align="center">App Drawer for Termux</h1>
 <!--

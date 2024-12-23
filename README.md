@@ -36,13 +36,16 @@
 > [!NOTE]
 > Without Termuxlauncher & Termux this tool won't work.
 
-## Dependencies
+## Dependencies & Requirements
 #### A. Download and install these apk's
 * Termuxlauncher apk's [Check this!](https://github.com/amsitlab/termuxlauncher/releases)
 * Termux:widget (optional) [Find on Play store](https://play.google.com/store/apps/details?id=com.termux.widget)
-    <!-- * ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
+
+#### B. Other
+* Android minimum version 5.0 up to Android 11
+     <!-- * ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
   * ~pkg install pick (https://github.com/mptre/pick)~ -->
-#### B. Install packages
+#### C. Install packages
 * ```input``` keyevent (is in /system/bin make sure it is part of the $PATH variable) (**Optional**)
 * git, curl, fzf, coreutils, sed, grep and which.
 * termux-setup-storage

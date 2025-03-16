@@ -3,8 +3,9 @@
 
 
 [![Fetch-license](https://img.shields.io/github/license/luisadha/drawercli.svg)](https://img.shields.io/github/license/luisadha/drawercli.svg) ![version](https://img.shields.io/badge/version-1.2.4-blue)
-[![Maintained-No](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://img.shields.io/badge/Maintained%3F-no-red.svg) ![android](https://img.shields.io/badge/android-green) ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange)
-
+[![Maintained-Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![android](https://img.shields.io/badge/android-green) 
+<!-- ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange)
+-->
 <h1 align="center">App Drawer for Termux</h1>
 <!--
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>

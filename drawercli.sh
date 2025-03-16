@@ -1,13 +1,20 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+launch="launch_App"
+main_activity="launch_Main"
+empty_activity="launch_ItSelf"
+suggest_activity() {
+  local num=$@
+  launch_Random "$num"
+}
 
-# drawercli v1.2.4-lightwieght
+# drawercli v1.2.7-launch.bash (android13 support)
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
 # made with love & clean code priority
-
+enable_history=0
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
-version="1.2.4-stable";
+version="1.2.7-launch.bash";
 name="drawercli";
 self="none";
 depend="termuxlauncher";
@@ -18,8 +25,10 @@ tmp_dir="$HOME/.tmp"
 history_path="$HOME/.drawercli_history";
 export PATH="$PATH:/system/bin";
 
+source ~/launch.bash ||
+echo "CANNOT EXECUTE "$0": library "launch.bash" not found: needed by main executable"
 
-source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
+#source $HOME/storage/shared/termuxlauncher/.apps-launcher &>/dev/null ||  source "${EXTERNAL_STORAGE}/termuxlauncher/.apps-launcher" || source /sdcard/termuxlauncher/.apps-launcher
 
 # initialize termuxlauncher, this will read all user-installed apps on the device
 # initialize alias if any
@@ -50,19 +59,14 @@ fi
 function Drawer {
     while true; 
           do 
-            launch -l                                           `# Main Program`        \
-            | grep -Exo '[a-z0-9:_-]+'                          \
-            | sort --reverse --numeric-sort                     \
-            | xargs                                             \
-            | xargs -n $num                                     \
-            | fzf $fast_scroll_flags --prompt="$hint" >&2 > ~/.tmp/drawercli.out 
+            $main_activity "$1" >&2 > ~/.tmp/drawercli.out 
     echo "$(cat ~/.tmp/drawercli.out)" >> $HOME/.drawercli_history
          if [ "$(cat ~/.tmp/drawercli.out)" == "termux" ]; then 
           break
        elif [ "$(cat ~/.tmp/drawercli.out)" == "" ] ; then
           echo "$info"; break
          fi
-    launch "$(cat ~/.tmp/drawercli.out)"
+    $launch "$(cat ~/.tmp/drawercli.out)"
     #   trap waitingInterupt SIGINT
        # resetClipboard;
         hideSoftKeyboard;
@@ -71,9 +75,8 @@ function Drawer {
 opt="$1"; if [ -z "$opt" ]; then
     hideSoftKeyboard; Drawer;
 elif [ "$opt" == "-s" ] || [ "$opt" == "--skip" ]; then # THIS OPTION SKIP
-launch $(launch -l `# Mengambil daftar aplikasi` \
-| grep -o "${self}" ) &>/dev/null; `# Memanggil termux itu sendiri supaya seolah2 silence`
-exit 0;
+ $empty_activity
+  exit 0;
 elif [ "$opt" == "-v" ] || [ "$opt" == "--version" ]; then
   echo -e "drawercli v${version} Copyright (c) 2023 - 2024 Luis Adha <adharudin14@gmail.com>";
   echo -e ""
@@ -82,15 +85,11 @@ elif [ "$opt" == "-v" ] || [ "$opt" == "--version" ]; then
   exit 0;
 elif [ "$opt" == "-S" ]; then # THIS OPTION SUGGESTIONS
         hideSoftKeyboard; error='option requires an argument after -- S'; catch=$2; try=`if [ -z "$catch" ]; then echo "$name: $error" >&2; exit ${1:+1}; fi`
-        launch $(launch -l `# Mengambil daftar aplikasi` \
-        | grep -Exo [a-z0-9:_-]+ `# Memparsing tampilan huruf ke huruf kecil semua` \
-        | sort --reverse --numeric-sort `# Mengurutkan urutan ke numerik terbalik ` \
-        | xargs `# Mengubah tata letak ke vertikal` \
-        | xargs -n $num                         \
-        | shuf `# Mengambil data secara acak` \
-        | head -n "${2}" 2>/dev/null `# Mengambil bagian atas saja pada daftar, menyembunyikan error jika tidak ada argumen ke $2` \
-        | fzf -0 $fast_scroll_flags  `# Lalu diolah dengan fzf, output fzf jangan disembunyikan, -0 berarti akan berhenti jika tidak ada queri yang cocok` \
-        ) &>/dev/null; exit ${1:+0}; # untuk menyembunyikan error dari command launch jika salah input
+
+        shift 
+        suggest_activity "$1"
+
+        exit ${1:+0}; # untuk menyembunyikan error dari command launch jika salah input
 elif [ "$opt" == "-u" ]; then # THIS OPTION MOST USAGE
   if [ ! -f $HOME/.drawercli_history ]; then
         echo "drawercli: No history most opened apps."
@@ -107,17 +106,16 @@ else
       | xargs -n $num \
       | head -n 1 \
       | fzf $fast_scroll_flags >&2 > ~/.tmp/drawercli.out
-            launch $(cat ~/.tmp/drawercli.out);
+            $launch $(cat ~/.tmp/drawercli.out);
   #resetClipboard;
 exit ${1:+0};
   fi
 elif [ "$opt" == "-r" ]; then # THIS OPTION FOR REFRESH LIST APPS BY termuxlauncher
-launch $(launch -l | grep "${depend}" ) &>/dev/null;
-  echo "drawercli: Scanning for new apps..."; sleep 1;
-  echo -e "Please, type \`drawercli' again to see effect!"
+  $empty_activity
+
 exit ${1:+0};
 elif [ "$opt" == "-w" ] || [ "$opt" == "--see-wallpaper" ]; then
-  launch $(launch -l | grep "current-wallpaper" )
+  $launch "Current wallpaper"
 exit ${1:+0};
 elif [ "$opt" == "-c" ] || [ "$opt" == "--clear-history" ]; then
 set +o noclobber

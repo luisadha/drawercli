@@ -37,12 +37,14 @@
 > Without Termuxlauncher & Termux this tool won't work.
 
 ## Dependencies & Requirements
-#### A. Download and install these apk's
+#### A. Download and install these apk's 
+[v1.2.4] Using termuxlauncher =< Android 11
 * Termuxlauncher apk's [Check this!](https://github.com/amsitlab/termuxlauncher/releases)
 * Termux:widget (optional) [Find on Play store](https://play.google.com/store/apps/details?id=com.termux.widget)
 
+[v1.2.7] Using [ListMyApps](https://github.com/u0a316/ListMyApps/releases/tag/v1.0)
 #### B. Other
-* Android minimum version 5.0 up to Android 11
+* Android minimum version 5.0 up to Android 13 Using ListMyApp
      <!-- * ~pkg install termux-api (https://wiki.termux.com/wiki/Termux:API)~
   * ~pkg install pick (https://github.com/mptre/pick)~ -->
 #### C. Install packages

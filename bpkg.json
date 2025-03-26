@@ -6,7 +6,7 @@
   "license": "MIT",
   "install": "bpkg run install",
   "dependencies": {
-    "launch": "v1.0"
+    "luisadha/launch": "v1.0"
   },
   "commands": {
     "install": "mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp drawercli.sh ${PREFIX:-/usr/local}/bin/drawercli && cp drawercli.1 ${PREFIX:-/usr/local}/share/man/man1 && echo \"The installation was completed.\"",        

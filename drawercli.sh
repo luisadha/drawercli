@@ -1,20 +1,13 @@
 #!/data/data/com.termux/files/usr/bin/bash
-pathlib="source $(which launch)"
-launch="launch_App"
-main_activity="launch_Main"
-empty_activity="launch_ItSelf"
-suggest_activity() {
-  local num=$@
-  launch_Random "$num"
-}
 
 # drawercli v1.2.7-launch.bash (android13 support)
 # App drawer on Android but it's CLI,
 # Copyright (c) 2023 Luis Adha
 # made with love & clean code priority
+
 enable_history=0
 fast_scroll_flags='--cycle' #not used yet # soon to version v1.2.2
-version="1.2.7-launch.bash";
+version="1.2.7-launch";
 name="drawercli";
 self="none";
 depend="termuxlauncher";
@@ -24,6 +17,14 @@ num=1;
 tmp_dir="$HOME/.tmp"
 history_path="$HOME/.drawercli_history";
 export PATH="$PATH:/system/bin";
+pathlib="source $(which launch)"
+launch="launch_App"
+main_activity="launch_Main"
+empty_activity="launch_ItSelf"
+suggest_activity() {
+  local num=$@
+  launch_Random "$num"
+}
 
 $pathlib ||
 echo "CANNOT EXECUTE "$0": library "launch" not found: needed by main executable"

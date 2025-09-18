@@ -1,4 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/env bash
+# drawercli-ps v1.0-play (Dependencies  https://f-droid.org/id/packages/de.onyxbits.listmyapps)
+# App drawer on Android but it's CLI,
+# Copyright (c) 2025 Luis Adha
+# made with love & clean code priority
 # set -euo pipefail # EXIT LANGSUNG SAAT ADA YANG ERROR
 # set -xv # DEBUG
 file="${1:--}"

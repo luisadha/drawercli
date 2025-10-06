@@ -6,7 +6,7 @@
 [![Maintained-Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![android](https://img.shields.io/badge/android-green) 
 <!-- ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange)
 -->
-<h1 align="center">App Drawer for Termux</h1>
+<h1 align="center">Drawercli (codename: Andra) Apps Drawer for Termux</h1>
 <!--
 <p align="center">Application drawer in the terminal. Requires the Termuxlauncher library or app and Termux installed on the device.</p>
 -->

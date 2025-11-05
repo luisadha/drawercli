@@ -1,6 +1,9 @@
 <!-- [![Please don't upload to GitHub](https://nogithub.codeberg.page/badge.svg)](https://nogithub.codeberg.page)
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg) -->
 
+![Warning](https://img.shields.io/badge/status-outdated-orange?style=for-the-badge)
+> Documentation rewrite in progress — may not reflect current behavior.
+
 
 [![Fetch-license](https://img.shields.io/github/license/luisadha/drawercli.svg)](https://img.shields.io/github/license/luisadha/drawercli.svg) ![version](https://img.shields.io/badge/version-1.2.4-blue)
 [![Maintained-Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![android](https://img.shields.io/badge/android-green) 

@@ -1,6 +1,6 @@
 {
   "name": "drawercli",
-  "version": "1.3.1-nova",
+  "version": "1.3.2-nova",
   "description": "This cli app supports using termuxlauncher as your primary launcher for Android phones, interactively and easily install. That's simply the Termuxlauncher Add-on built with fzf🚀",
   "scripts": [ "drawercli.sh" ],
   "license": "MIT",
@@ -10,7 +10,8 @@
     "parallel": "20250622"
   },
   "commands": {
-    "install": "mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp drawercli.sh ${PREFIX:-/usr/local}/bin/drawercli && cp drawercli.1 ${PREFIX:-/usr/local}/share/man/man1 && echo \"The installation was completed.\"",
+    "install-deps": "pkg install aapt && pkg install parallel",
+    "install": "bpkg run install-deps && mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp drawercli.sh ${PREFIX:-/usr/local}/bin/drawercli && cp drawercli.1 ${PREFIX:-/usr/local}/share/man/man1 && echo \"The installation was completed.\"",
     "lint": "shellcheck **/*.sh"
   }
 }

@@ -11,7 +11,7 @@
   },
   "commands": {
     "install-deps": "pkg install aapt && pkg install parallel",
-    "install": "bpkg run install-deps && mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp drawercli.sh ${PREFIX:-/usr/local}/bin/drawercli && cp drawercli.1 ${PREFIX:-/usr/local}/share/man/man1 && echo \"The installation was completed.\"",
+    "install": "pkg install aapt && pkg install parallel && mkdir -p ${PREFIX:-/usr/local}/{bin,share/man/man1} && cp drawercli.sh ${PREFIX:-/usr/local}/bin/drawercli && cp drawercli.1 ${PREFIX:-/usr/local}/share/man/man1 && echo \"The installation was completed.\"",
     "lint": "shellcheck **/*.sh"
   }
 }

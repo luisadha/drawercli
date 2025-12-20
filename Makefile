@@ -1,26 +1,26 @@
-TARGET = drawercli.sh
-# Installation directories
-PREFIX ?= /usr
-BINDIR = $(PREFIX)/bin
+TARGET  := drawercli.sh
+PREFIX  ?= /usr
+BINDIR  := $(PREFIX)/bin
 
-# Rule to install the binary
-install:
-    @echo "Installing deps."
-    pkg install aapt && pkg install parallel
-	@echo "Installing $(TARGET) to $(BINDIR)"
-	# Use the 'install' command to copy the binary to the target directory with executable permissions
-	install -m 755 $(TARGET) $(BINDIR)
-
-# Rule to uninstall the binary
-uninstall:
-	@echo "Removing $(TARGET) from $(BINDIR)"
-	# Remove the binary from the target directory
-	rm -f $(BINDIR)/$(TARGET)
-
-# Default rule
+# Default target
 all:
-	@echo "Use 'make install' to install and 'make uninstall' to remove."
+	@echo "Gunakan 'make install' atau 'make uninstall'"
 
-# Phony targets to prevent conflicts with files named 'install', 'uninstall', or 'all'
-.PHONY: install uninstall all
+# Install dependencies (opsional)
+deps:
+	@echo "Memeriksa dependensi..."
+	@command -v aapt >/dev/null 2>&1 || pkg install -y aapt
+	@command -v parallel >/dev/null 2>&1 || pkg install -y parallel
 
+# Install target
+install: deps
+	@echo "Menginstall $(TARGET) ke $(BINDIR)"
+	@mkdir -p $(BINDIR)
+	@install -m 755 $(TARGET) $(BINDIR)/drawercli
+
+# Uninstall target
+uninstall:
+	@echo "Menghapus drawercli dari $(BINDIR)"
+	@rm -f $(BINDIR)/drawercli
+
+.PHONY: all install uninstall deps

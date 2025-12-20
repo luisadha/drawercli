@@ -1,5 +1,7 @@
 <!-- [![Please don't upload to GitHub](https://nogithub.codeberg.page/badge.svg)](https://nogithub.codeberg.page)
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg) -->
+This project uses GNU Parallel.
+Citation: Tange, O. (2025). GNU Parallel. Zenodo. doi:10.5281/zenodo.17692695
 
 ![Warning](https://img.shields.io/badge/status-outdated-orange?style=for-the-badge)
 > Documentation rewrite in progress — may not reflect current behavior.

@@ -5,6 +5,8 @@ BINDIR = $(PREFIX)/bin
 
 # Rule to install the binary
 install:
+    @echo "Installing deps."
+    pkg install aapt && pkg install parallel
 	@echo "Installing $(TARGET) to $(BINDIR)"
 	# Use the 'install' command to copy the binary to the target directory with executable permissions
 	install -m 755 $(TARGET) $(BINDIR)

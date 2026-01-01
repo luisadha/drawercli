@@ -10,7 +10,7 @@ while getopts "hv" opt; do
       echo "  -v    show version"
       exit 0
       ;;
-    v)
+    v|--version)
       echo "$0 version $VERSION"
       exit 0
       ;;

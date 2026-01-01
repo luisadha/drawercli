@@ -1,4 +1,28 @@
 #!/data/data/com.termux/files/usr/bin/env bash
+
+VERSION="1.3.3"
+
+while getopts "hv" opt; do
+  case $opt in
+    h)
+      echo "Usage: $0 [options]"
+      echo "  -h    show help"
+      echo "  -v    show version"
+      exit 0
+      ;;
+    v)
+      echo "$0 version $VERSION"
+      exit 0
+      ;;
+    *)
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND - 1))
+
+
 IFS=''
 
 # ambil daftar package

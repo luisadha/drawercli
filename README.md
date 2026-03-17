@@ -36,6 +36,7 @@ bpkg install -g luisadha/drawercli
 ## Contributor
 
 @zaedstudioshpkentang
+@fmway
 
 ## 💰 Support my work by Donating
  

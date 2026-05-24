@@ -11,7 +11,7 @@ while getopts "hv" opt; do
       exit 0
       ;;
     v|--version)
-      echo "$0 version $VERSION"
+      echo "$0 version $VERSION-nova"
       exit 0
       ;;
     *)

@@ -2,7 +2,7 @@
 IFS=''
 
 # ambil daftar package
-packages=$(pm list packages --user 0 -3 2>&1 </dev/null | sed 's/^package://')
+packages=$(pm list packages --user 0 -s 2>&1 </dev/null | sed 's/^package://')
 
 # function untuk tiap package
 process_pkg() {

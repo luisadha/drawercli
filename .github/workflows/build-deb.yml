@@ -1,0 +1,69 @@
+name: Build .deb package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build-deb:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set variables
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          PACKAGE=$(basename $GITHUB_REPOSITORY)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "PACKAGE=$PACKAGE" >> $GITHUB_ENV
+
+      - name: Get repo description
+        run: |
+          DESC=$(curl -s https://api.github.com/repos/${GITHUB_REPOSITORY} | jq -r '.description')
+          # kalau deskripsi kosong, fallback biar ga error
+          if [ -z "$DESC" ] || [ "$DESC" = "null" ]; then
+            DESC="No description provided"
+          fi
+          echo "DESCRIPTION=$DESC" >> $GITHUB_ENV
+
+      - name: Prepare debian package structure
+        run: |
+          mkdir -p build/${{ env.PACKAGE }}_${{ env.VERSION }}/DEBIAN
+          mkdir -p build/${{ env.PACKAGE }}_${{ env.VERSION }}/data/data/com.termux/files/usr/bin
+          mkdir -p build/${{ env.PACKAGE }}_${{ env.VERSION }}/data/data/com.termux/files/usr/share/doc/${{ env.PACKAGE }}
+
+          # contoh patching versi di script (opsional)
+          sed -i "s/^# version:.*/# version: $VERSION/" index.html || true
+          sed -i "s/^version=.*/version=$VERSION/" index.html || true
+
+          # copy docs & script
+          cp README.md build/${{ env.PACKAGE }}_${{ env.VERSION }}/data/data/com.termux/files/usr/share/doc/${{ env.PACKAGE }}/README.md
+          cp LICENSE build/${{ env.PACKAGE }}_${{ env.VERSION }}/data/data/com.termux/files/usr/share/doc/${{ env.PACKAGE }}/LICENSE
+          cp index.html build/${{ env.PACKAGE }}_${{ env.VERSION }}/data/data/com.termux/files/usr/bin/${{ env.PACKAGE }}
+          chmod 755 build/${{ env.PACKAGE }}_${{ env.VERSION }}/data/data/com.termux/files/usr/bin/${{ env.PACKAGE }}
+
+          # control file
+          cat > build/${{ env.PACKAGE }}_${{ env.VERSION }}/DEBIAN/control <<EOF
+          Package: ${{ env.PACKAGE }}
+          Version: ${{ env.VERSION }}
+          Architecture: all
+          Maintainer: Luis Adha <adharudin14@gmail.com>
+          Description: ${{ env.DESCRIPTION }}
+          Priority: optional
+          Section: book
+          EOF
+
+      - name: Build .deb
+        run: |
+          dpkg-deb --build build/${{ env.PACKAGE }}_${{ env.VERSION }}
+          mv build/${{ env.PACKAGE }}_${{ env.VERSION }}.deb ${{ env.PACKAGE }}_${{ env.VERSION }}_all-termux.deb
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.PACKAGE }}_${{ env.VERSION }}_all-termux.deb

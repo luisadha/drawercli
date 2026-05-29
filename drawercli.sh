@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/env bash
 
-VERSION="1.3.3"
+VERSION="1.4.0"
 
 while getopts "hv" opt; do
   case $opt in

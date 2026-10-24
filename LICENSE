@@ -1,9 +1,60 @@
-MIT License
+Business Source License 1.1
+===========================
 
-Copyright (c) 2023 luisadha
+License Parameters:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Licensor:                 luisadha (Founder of Drawercli)
+Development Object:       Drawercli Aurora (and all associated scripts/installers)
+Change License:           GNU General Public License v3.0 (GPL-3.0)
+Change Date:              2029-10-24
+Additional Use Grant:     You are granted the right to use the Licensed Work for 
+                          personal, educational, and non-commercial purposes only. 
+                          The creation, compilation, or redistribution of automated 
+                          installers or application packages (APKs) based on this 
+                          work for monetization, commercial gain, or paid donation 
+                          rewards is strictly prohibited without the Licensor's 
+                          prior written permission.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+--------------------------------------------------------------------------------
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Terms of the License:
+
+1. Grant of License. Licensor hereby grants you a worldwide, royalty-free, 
+   non-exclusive, non-transferable, and revocable license to use, copy, 
+   modify, and distribute the Licensed Work, provided that you comply with 
+   all the terms, conditions, and restrictions of this License, including 
+   the License Parameters above.
+
+2. Restrictions. Any use, copying, modification, or distribution of the 
+   Licensed Work not expressly permitted by the Additional Use Grant is a 
+   material breach of this License and constitutes an infringement of the 
+   intellectual property rights of the Licensor.
+
+3. Change to Open Source License. On the Change Date, or upon the occurrence 
+   of the Change Event (if any) specified in the License Parameters, this 
+   License shall automatically convert, and the Licensor hereby grants you a 
+   permanent, worldwide, royalty-free, non-exclusive, irrevocable license 
+   under the terms of the Change License specified above, to use, copy, 
+   modify, and distribute the Licensed Work for any purpose, including 
+   commercial purposes.
+
+4. Intellectual Property Notices. You must retain and reproduce all copyright, 
+   trademark, and other proprietary notices of the Licensor in all copies or 
+   modifications of the Licensed Work that you make.
+
+5. Termination. This License and the rights granted hereunder will terminate 
+   automatically and immediately upon any breach by you of its terms. Upon 
+   termination, you must cease all use, copying, modification, and 
+   distribution of the Licensed Work.
+
+6. Disclaimer of Warranty. TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE 
+   LICENSED WORK IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, 
+   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL 
+   THE LICENSOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR 
+   OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, 
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE LICENSED WORK.
+
+7. Governing Law. This License shall be governed by and construed in 
+   accordance with the laws of the jurisdiction where the Licensor resides, 
+   without regard to its conflict of law principles.
